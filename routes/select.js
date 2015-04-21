@@ -1,25 +1,29 @@
+var db = require('../db');
 var express = require('express');
 var router = express.Router();
+var _ = require('underscore');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Cowpie' });
 });
 
-/**********************************************************/
-/* list all categories, and allow adding to each category */
-/**********************************************************/
-
 router.get('/beef', function(req, res, next) {
-
+  res.render('select', {
+    groups: db.beef
+  });
 });
 
 router.get('/dairy', function(req, res, next) {
-
+  res.render('select', {
+    groups: db.dairy
+  });
 });
 
 router.get('/dairygoat', function(req, res, next) {
-
+  res.render('select', {
+    groups: db.dairyGoat
+  });
 });
 
 router.get('/goat', function(req, res, next) {

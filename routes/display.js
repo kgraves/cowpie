@@ -6,10 +6,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Cowpie' });
 });
 
-/**********************************************************/
-/* list all categories, and allow adding to each category */
-/**********************************************************/
-
 router.get('/beef', function(req, res, next) {
 
 });
